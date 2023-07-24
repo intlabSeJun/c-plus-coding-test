@@ -1,6 +1,6 @@
-C++ 백준 코딩테스트
+# C++ 백준 코딩테스트
 
-티스토리 블로그
+# 티스토리 블로그
 https://forward-gradually.tistory.com/category/C%2B%2B/%EB%B0%B1%EC%A4%80%20coding%20test
 
 # 참고자료
