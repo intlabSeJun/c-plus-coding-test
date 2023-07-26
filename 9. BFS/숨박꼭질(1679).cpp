@@ -21,14 +21,11 @@ int main() {
 	vector<int> map(200001, 0);
 	map[N] = 1;
 
-	//print_map(map);
-
 	queue<int> Q;
 	Q.push(N);
 
-	int x;
+	int x, new_x;
 	int dx[3] = { 1, -1, 2 };
-	int new_x;
 	int short_cut = 0, flag=0;
 	while (!Q.empty()) {
 		x = Q.front();
@@ -48,7 +45,6 @@ int main() {
 			map[new_x] = map[x] + 1;
 		}
 		if (flag == 1) break;
-		//print_map(map);
 	}
 	if (N == K) cout << 0;
 	else cout << short_cut-1;
