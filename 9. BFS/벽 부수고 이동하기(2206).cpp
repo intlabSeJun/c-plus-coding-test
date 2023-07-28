@@ -24,8 +24,10 @@ int main() {
 	int N, M;
 	cin >> N >> M;
 
-	vector<vector<int>> map_check(N, vector<int>(M));
-	vector<vector<int>> broken_map_check(N, vector<int>(M));
+	//vector<vector<int>> map_check(N, vector<int>(M));
+	//vector<vector<int>> broken_map_check(N, vector<int>(M));
+	int map_check[1000][1000];
+	int broken_map_check[1000][1000];
 	char map[1002][1002];
 
 	string s;
@@ -33,6 +35,8 @@ int main() {
 		cin >> s;
 		for (int j = 0; j < M; j++) {
 			map[i][j] = s[j];
+			map_check[i][j] = 0;
+			broken_map_check[i][j] = 0;
 		}
 	}
 
@@ -65,7 +69,7 @@ int main() {
 				if (x < 0 || x >= N || y < 0 || y >= M) continue;
 				if (broken == 1) {
 					if (map[x][y] == '1') continue;
-					else if ((broken_map_check[x][y] >= 1 && broken_map_check[x][y] != 7777) || (map_check[x][y] >=1&& map_check[x][y] != 7777)) continue;
+					else if ((broken_map_check[x][y] >= 1 && broken_map_check[x][y] != 7777) || (map_check[x][y] >=1 && map_check[x][y] != 7777)) continue;
 					if (broken_map_check[x][y] == 7777) {
 						flag = 1;
 						short_cut = broken_map_check[p.first][p.second] + 1;
