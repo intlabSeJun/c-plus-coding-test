@@ -10,12 +10,12 @@ int BFS(vector<string> &map, vector<vector<vector<int>>> &map_check, int N, int 
 	int dx[4] = { -1,1,0,0 };
 	int dy[4] = { 0,0,-1,1 };
 
-	queue<tuple<int, int, int>> Q;
+	queue<tuple<int, int, int>> Q; // tuple 형태의 3개 인자를 받을 큐 생성.
 	Q.push(make_tuple(0, 0, 0));
 
-	int x, y, broken;
-	int new_x, new_y;
-	int distance;
+	int x, y, broken; // 현재 좌표와 broken 했는지 정보를 받습니다.
+	int new_x, new_y; // 새로운 좌표를 저장합니다.
+	int distance; // 현재까지의 이동한 거리를 구합니다.
 	while (!Q.empty()) {
 		tie(x, y, broken) = Q.front();
 		Q.pop();
