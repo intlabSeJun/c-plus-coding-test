@@ -12,20 +12,6 @@ void func(int k) {
 		return;
 	}
 
-	/*for (int i = 1; i <= N; i++) {
-		if (k != 0) {
-			if (arr[k - 1] <= i)
-			{
-				arr[k] = i;
-				func(k + 1);
-			}
-		}
-		else {
-			arr[k] = i;
-			func(k + 1);
-		}
-	}*/
-
 	int st;
 	if (k != 0) st = arr[k - 1];
 	else st = 1;
